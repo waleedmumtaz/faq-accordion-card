@@ -80,7 +80,7 @@
           <img
             src="/assets/bg-pattern-desktop.svg"
             alt="pattern"
-            class="absolute -top-72 -left-[36.5rem]"
+            class="hidden md:block absolute -top-72 -left-[36.5rem]"
           />
         </div>
         <div>
