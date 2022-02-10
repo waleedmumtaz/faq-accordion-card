@@ -1,6 +1,6 @@
 <script>
-  import Footer from './lib/footer.svelte'
   import MainContent from './lib/main-content.svelte'
+  import Footer from './lib/footer.svelte'
 </script>
 
 <svelte:head>
@@ -16,7 +16,9 @@
   />
 </svelte:head>
 
-<div>
+<div
+  class="min-h-screen bg-gradient-to-b from-cstm-primary-gradient-soft-violet to-cstm-primary-gradient-soft-blue font-kumbh-sans flex flex-col"
+>
   <MainContent />
   <Footer />
 </div>

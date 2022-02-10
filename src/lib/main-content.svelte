@@ -1,22 +1,107 @@
-<main>
-  <!--
-  
-  How many team members can I invite?
-  You can invite up to 2 additional users on the Free plan. There is no limit on 
-  team members for the Premium plan.
+<script>
+  const setStyles = (id) => {
+    faqs[id - 1].questionStyles =
+      faqs[id - 1].questionStyles === '' ? 'font-bold' : ''
+    faqs[id - 1].arrowStyles =
+      faqs[id - 1].arrowStyles === '' ? 'rotate-180' : ''
+  }
 
-  What is the maximum file upload size?
-  No more than 2GB. All files in your account must fit your allotted storage space.
+  let faqs = [
+    {
+      id: '1',
+      question: 'How many team members can I invite?',
+      answer:
+        'You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.',
+      questionStyles: '',
+      arrowStyles: '',
+    },
+    {
+      id: '2',
+      question: 'What is the maximum file upload size?',
+      answer:
+        'No more than 2GB. All files in your account must fit your allotted storage space.',
+      questionStyles: '',
+      arrowStyles: '',
+    },
+    {
+      id: '3',
+      question: 'How do I reset my password?',
+      answer:
+        'Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.',
+      questionStyles: '',
+      arrowStyles: '',
+    },
+    {
+      id: '4',
+      question: 'Can I cancel my subscription?',
+      answer:
+        'Yes! Send us a message and we’ll process your request no questions asked.',
+      questionStyles: '',
+      arrowStyles: '',
+    },
+    {
+      id: '5',
+      question: 'Do you provide additional support?',
+      answer:
+        'Chat and email support is available 24/7. Phone lines are open during normal business hours.',
+      questionStyles: '',
+      arrowStyles: '',
+    },
+  ]
+</script>
 
-  How do I reset my password?
-  Click “Forgot password” from the login page or “Change password” from your profile page.
-  A reset link will be emailed to you.
-
-  Can I cancel my subscription?
-  Yes! Send us a message and we’ll process your request no questions asked.
-
-  Do you provide additional support?
-  Chat and email support is available 24/7. Phone lines are open during normal business hours.
-
-  -->
+<main class="flex-1 flex flex-col justify-center">
+  <div
+    class="px-5 pt-48 md:pt-5 pb-20 md:pb-5 md:max-w-6xl md:mx-auto md:w-full"
+  >
+    <img
+      src="/assets/illustration-woman-online-mobile.svg"
+      alt="woman online illustration"
+      class="w-full px-10 md:hidden"
+    />
+    <div class="bg-white p-10 md:p-20 rounded-3xl overflow-hidden">
+      <div class="md:grid md:grid-cols-2">
+        <div class="">
+          <img
+            src="/assets/illustration-woman-online-desktop.svg"
+            alt="woman online illustration"
+            class="w-full hidden md:block"
+          />
+          <img
+            src="/assets/illustration-box-desktop.svg"
+            alt="box"
+            class="hidden md:block"
+          />
+        </div>
+        <div>
+          <h1
+            class="font-bold text-3xl text-center md:text-left pb-10 pt-28 md:pt-0"
+          >
+            FAQ
+          </h1>
+          {#each faqs as { id, question, answer, questionStyles, arrowStyles }}
+            <details class="border-b-2 py-3">
+              <summary
+                on:click={() => setStyles(id)}
+                class={`${questionStyles} list-none flex justify-between items-center hover:text-cstm-primary-text-soft-red cursor-pointer`}
+              >
+                {question}<span
+                  ><img
+                    src="/assets/icon-arrow-down.svg"
+                    alt="down arrow"
+                    class={`${arrowStyles}`}
+                  /></span
+                >
+              </summary>
+              <p
+                class="pt-3 pr-3 cursor-text text-sm text-cstm-neutral-text-dark-grayish-blue"
+              >
+                {answer}
+              </p>
+            </details>
+          {/each}
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
