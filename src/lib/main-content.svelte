@@ -51,29 +51,36 @@
 </script>
 
 <main class="flex-1 flex flex-col justify-center pt-32">
-  <div class="px-5 py-5 md:max-w-6xl md:mx-auto md:w-full relative">
+  <div class="px-5 py-5 md:py-0 md:max-w-6xl md:mx-auto md:w-full relative">
     <img
       src="/assets/illustration-woman-online-mobile.svg"
       alt="woman online illustration"
-      class="w-64 mx-auto md:hidden absolute -top-24 left-0 right-0"
+      class="w-64 mx-auto md:hidden absolute -top-24 left-0 right-0 z-10"
     />
     <img
       src="/assets/bg-pattern-mobile.svg"
       alt="pattern"
-      class="w-64 mx-auto md:hidden absolute top-5 left-0 right-0"
+      class="w-64 mx-auto md:hidden absolute top-5 left-0 right-0 z-10"
     />
-    <div class="bg-white p-10 md:p-20 rounded-3xl overflow-hidden shadow-lg">
-      <div class="md:grid md:grid-cols-2">
-        <div class="">
+    <div
+      class="bg-white p-10 md:p-20 rounded-3xl shadow-lg relative overflow-hidden"
+    >
+      <div class="md:grid md:grid-cols-2 md:items-center">
+        <div>
           <img
             src="/assets/illustration-woman-online-desktop.svg"
             alt="woman online illustration"
-            class="w-full hidden md:block"
+            class="max-w-md hidden md:block absolute top-16 -left-16"
           />
           <img
             src="/assets/illustration-box-desktop.svg"
             alt="box"
-            class="hidden md:block"
+            class="hidden md:block absolute top-56 -left-10"
+          />
+          <img
+            src="/assets/bg-pattern-desktop.svg"
+            alt="pattern"
+            class="absolute -top-72 -left-[36.5rem]"
           />
         </div>
         <div>
