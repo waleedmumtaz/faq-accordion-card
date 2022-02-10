@@ -50,16 +50,19 @@
   ]
 </script>
 
-<main class="flex-1 flex flex-col justify-center">
-  <div
-    class="px-5 pt-48 md:pt-5 pb-20 md:pb-5 md:max-w-6xl md:mx-auto md:w-full"
-  >
+<main class="flex-1 flex flex-col justify-center pt-32">
+  <div class="px-5 py-5 md:max-w-6xl md:mx-auto md:w-full relative">
     <img
       src="/assets/illustration-woman-online-mobile.svg"
       alt="woman online illustration"
-      class="w-full px-10 md:hidden"
+      class="w-64 mx-auto md:hidden absolute -top-24 left-0 right-0"
     />
-    <div class="bg-white p-10 md:p-20 rounded-3xl overflow-hidden">
+    <img
+      src="/assets/bg-pattern-mobile.svg"
+      alt="pattern"
+      class="w-64 mx-auto md:hidden absolute top-5 left-0 right-0"
+    />
+    <div class="bg-white p-10 md:p-20 rounded-3xl overflow-hidden shadow-lg">
       <div class="md:grid md:grid-cols-2">
         <div class="">
           <img
@@ -89,7 +92,7 @@
                   ><img
                     src="/assets/icon-arrow-down.svg"
                     alt="down arrow"
-                    class={`${arrowStyles}`}
+                    class={`${arrowStyles} ml-3`}
                   /></span
                 >
               </summary>
